@@ -1,0 +1,3 @@
+def json = new groovy.json.JsonSlurper().parseText(message.getBody(String))
+assert json.orderId && json.customerId : "Missing mandatory fields"
+return message
